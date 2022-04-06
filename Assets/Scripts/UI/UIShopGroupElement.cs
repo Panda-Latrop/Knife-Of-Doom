@@ -60,7 +60,7 @@ public class UIShopGroupElement : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
       int id = NodeFromWorld(gridRectTransform.InverseTransformPoint(eventData.position));
-        if (id >= 0)
+        if (id >= 0 && skins[id].open)
             CallOnSelect(skins[id].so);
     }
     public int NodeFromWorld(Vector3 position)

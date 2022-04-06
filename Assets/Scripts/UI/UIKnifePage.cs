@@ -44,7 +44,7 @@ public class UIKnifePage : UIPage
             for (int i = 0; i < r.Length; i++)
             {
                 StuffSkinScriptableObject skin = r[i];
-                skins.Add(new StuffSkinInfo(skin, GameInstance.Instance.HasSkin(skin)));
+                skins.Add(new StuffSkinInfo(skin, GameInstance.Instance.HasSkin(skin) || skin.Open));
             }
             groups[0].SetSkins(skins);
         }
